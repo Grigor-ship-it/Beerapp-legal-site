@@ -1,27 +1,529 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Beermate – Privacy Policy</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <link rel="stylesheet" href="./style.css" />
+  <meta charset="UTF-8" />
+  <title>BeerMate – Terms of Use & Privacy Policy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="BeerMate – Terms of Use and Privacy Policy for the BeerMate beer discovery and rating app."
+  />
+  <style>
+    :root {
+      --bg: #f9f6f0;
+      --card: #ffffff;
+      --accent: #c4b489;
+      --accent-dark: #8b7453;
+      --text: #222222;
+      --muted: #666666;
+      --border: #e2ddd2;
+      --max-width: 900px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: radial-gradient(circle at top left, #e9ddc6, #c9b699);
+      color: #1a1a1a;
+      padding: 32px 16px 24px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    header .inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    header h1 {
+      margin: 0 0 8px;
+      font-size: 28px;
+      letter-spacing: 0.04em;
+    }
+
+    header p {
+      margin: 0;
+      font-size: 14px;
+      color: #2f2b24;
+    }
+
+    main {
+      max-width: var(--max-width);
+      margin: 24px auto;
+      padding: 0 16px 40px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      padding: 20px 18px;
+      margin-bottom: 18px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: 22px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 6px;
+    }
+
+    h3 {
+      margin-top: 18px;
+      font-size: 18px;
+    }
+
+    h4 {
+      margin-top: 14px;
+      font-size: 15px;
+    }
+
+    p {
+      margin: 8px 0;
+    }
+
+    ul {
+      margin: 6px 0 10px 20px;
+      padding: 0;
+    }
+
+    li {
+      margin: 2px 0;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 10px 0 4px;
+    }
+
+    .chip {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 4px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: #fbf8f2;
+      color: var(--muted);
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 2px 6px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: #fbf8f2;
+      color: var(--muted);
+      margin-left: 6px;
+    }
+
+    .highlight-box {
+      border-left: 3px solid var(--accent);
+      background: #fbf8f2;
+      padding: 10px 12px;
+      border-radius: 8px;
+      font-size: 13px;
+      color: var(--muted);
+      margin: 8px 0 12px;
+    }
+
+    strong {
+      font-weight: 600;
+    }
+
+    a {
+      color: var(--accent-dark);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 12px;
+      color: var(--muted);
+      padding: 12px 16px 18px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 22px;
+      }
+      header p {
+        font-size: 13px;
+      }
+      .card {
+        padding: 16px 14px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <div class="page-shell">
-    <main class="content">
-      <header class="header">
-        <!-- same header as index.html -->
-      </header>
-
-      <div class="badge">Privacy Policy</div>
-      <h1>Privacy Policy</h1>
-
-      <!-- your policy sections here -->
-
-      <div class="footer">
-        <!-- same footer -->
-      </div>
-    </main>
+<header>
+  <div class="inner">
+    <h1>BeerMate – Terms of Use &amp; Privacy Policy</h1>
+    <p>Last updated: November 18, 2025</p>
+    <p style="margin-top:6px;font-size:13px;">
+      This page explains how BeerMate works, what we expect from you,
+      and how we handle your data.
+    </p>
   </div>
+</header>
+
+<main>
+  <!-- Quick Summary -->
+  <section class="card">
+    <h2>Summary (Not a Substitute for the Full Terms)</h2>
+    <div class="chips">
+      <span class="chip">Beer discovery</span>
+      <span class="chip">Ratings &amp; reviews</span>
+      <span class="chip">Adults only</span>
+      <span class="chip">Data protection</span>
+    </div>
+
+    <p>
+      BeerMate is a beer discovery and rating app. You can use it to explore beers,
+      track what you’ve tried, rate bottles and cans, and discover breweries that
+      match your taste.
+    </p>
+
+    <div class="highlight-box">
+      <strong>Key points in plain language:</strong>
+      <ul>
+        <li>You must be at or above the legal drinking age in your region.</li>
+        <li>BeerMate does <strong>not</strong> sell alcohol and does not encourage excessive drinking.</li>
+        <li>We collect basic account data, app usage data, and beer-related activity (ratings, wishlists, etc.).</li>
+        <li>We use this data to operate the app, personalize your experience, and improve recommendations.</li>
+        <li>We don’t sell your personal data.</li>
+        <li>You can contact us to access, update, or delete your data where legally allowed.</li>
+      </ul>
+    </div>
+
+    <p style="font-size:13px;">
+      By creating an account or using BeerMate, you agree to these
+      <strong>Terms of Use</strong> and our <strong>Privacy Policy</strong> below.
+    </p>
+  </section>
+
+  <!-- Who We Are -->
+  <section class="card">
+    <h2>1. Who We Are &amp; How to Contact Us</h2>
+    <p>
+      BeerMate (“<strong>we</strong>”, “<strong>us</strong>”, “<strong>our</strong>”) is a beer-focused mobile
+      application designed to help adult users discover, track, and rate beers and breweries.
+    </p>
+    <p>
+      For any questions about these Terms or how we handle your data, you can reach us at:
+    </p>
+    <p>
+      <strong>Email:</strong> <a href="mailto:you@example.com">you@example.com</a><br />
+      <strong>App Name:</strong> BeerMate<br />
+      <strong>Company:</strong> [Your Company Name]<br />
+      <strong>Jurisdiction:</strong> [Your Country / Province / State]
+    </p>
+  </section>
+
+  <!-- TERMS OF USE -->
+  <section class="card">
+    <h2>2. Terms of Use</h2>
+
+    <h3>2.1 Eligibility &amp; Responsible Use</h3>
+    <p>
+      BeerMate is intended only for users who are at or above the
+      <strong>legal drinking age</strong> in their country, province, or state.
+      By using BeerMate, you confirm that:
+    </p>
+    <ul>
+      <li>You are at or above the legal drinking age in your jurisdiction.</li>
+      <li>You will use the app responsibly and do not use it to promote harmful or excessive drinking.</li>
+      <li>You are legally allowed to use the app under the laws of your country/region.</li>
+    </ul>
+    <p>
+      BeerMate does not sell or deliver alcohol. Any purchase or consumption of alcohol is
+      outside the app and subject to local laws and your own judgment.
+    </p>
+
+    <h3>2.2 Account Registration &amp; Security</h3>
+    <p>
+      To access some features (such as saving ratings, wishlists, and history),
+      you may need to create an account. You agree to:
+    </p>
+    <ul>
+      <li>Provide accurate, up-to-date information.</li>
+      <li>Keep your login credentials secure and confidential.</li>
+      <li>Notify us if you suspect any unauthorized access to your account.</li>
+    </ul>
+    <p>
+      You are responsible for all actions taken under your account unless you have
+      notified us of suspected misuse.
+    </p>
+
+    <h3>2.3 User Content (Ratings, Reviews, Notes, Photos)</h3>
+    <p>
+      BeerMate lets you create and submit content such as:
+    </p>
+    <ul>
+      <li>Beer ratings and reviews</li>
+      <li>Taste notes and preferences</li>
+      <li>Wishlist entries</li>
+      <li>Photos of beers, bottles, or cans (where supported)</li>
+    </ul>
+    <p>
+      You remain the owner of your content, but by submitting it through the app, you grant us a
+      non-exclusive, worldwide, royalty-free license to use, store, display, reproduce, modify,
+      and distribute that content as needed to operate and improve the app.
+    </p>
+    <p>
+      You agree that your content will not:
+    </p>
+    <ul>
+      <li>Encourage underage or irresponsible drinking.</li>
+      <li>Contain hate speech, harassment, or illegal content.</li>
+      <li>Infringe on the intellectual property rights of others.</li>
+      <li>Contain inappropriate or explicit content unrelated to beer.</li>
+    </ul>
+    <p>
+      We may remove or moderate content that violates these rules or local law.
+    </p>
+
+    <h3>2.4 Prohibited Conduct</h3>
+    <p>You agree not to:</p>
+    <ul>
+      <li>Use the app if you are under the legal drinking age.</li>
+      <li>Scrape or bulk-download data from BeerMate without written permission.</li>
+      <li>Reverse-engineer, decompile, or attempt to access our backend systems or APIs outside authorized use.</li>
+      <li>Create fake accounts, fake ratings, or manipulate rankings.</li>
+      <li>Introduce malware, attempt to hack, or interfere with servers or other users.</li>
+    </ul>
+
+    <h3>2.5 Intellectual Property</h3>
+    <p>
+      The BeerMate app, including the app design, logos, UI, and underlying software, is protected by
+      intellectual property laws. You may not copy, modify, or distribute the app or its content except as
+      allowed by these Terms or with our prior written consent.
+    </p>
+
+    <h3>2.6 Third-Party Services &amp; Links</h3>
+    <p>
+      BeerMate may display information about breweries, beers, maps, or external websites. We are not
+      responsible for the content, accuracy, or policies of third-party sites or services.
+    </p>
+
+    <h3>2.7 Disclaimers</h3>
+    <p>
+      BeerMate is provided on an “<strong>as-is</strong>” and “<strong>as-available</strong>” basis. We do not
+      guarantee that the app will be error-free, uninterrupted, or that all data (e.g., beer info, ABV, styles)
+      is always accurate or complete. Information may be sourced from third parties or user submissions.
+    </p>
+
+    <h3>2.8 Limitation of Liability</h3>
+    <p style="font-size:13px;">
+      To the maximum extent permitted by law, we are not liable for any indirect, incidental, special,
+      consequential, or punitive damages, or any loss of data, revenue, profits, or reputation arising out of
+      your use of BeerMate. Our total liability for any claim relating to BeerMate will not exceed the
+      amount you have paid to use the app (if any) in the past 12 months.
+    </p>
+
+    <h3>2.9 Termination</h3>
+    <p>
+      We may suspend or terminate your access to BeerMate at any time if we believe you have violated
+      these Terms, misused the app, or if required by law. You may also stop using the app at any time.
+    </p>
+
+    <h3>2.10 Changes to the Terms</h3>
+    <p>
+      We may update these Terms from time to time. If we make material changes, we will update the
+      “Last updated” date at the top of this page and, where appropriate, notify you in the app.
+      Your continued use of BeerMate after changes are published means you accept the updated Terms.
+    </p>
+  </section>
+
+  <!-- PRIVACY POLICY -->
+  <section class="card">
+    <h2>3. Privacy Policy</h2>
+
+    <h3>3.1 What This Policy Covers</h3>
+    <p>
+      This Privacy Policy explains what personal data we collect, how we use it, how we store it,
+      and what choices you have. It applies to all use of the BeerMate app and related services.
+    </p>
+
+    <h3>3.2 Data We Collect</h3>
+    <h4>(a) Information You Provide</h4>
+    <ul>
+      <li><strong>Account details</strong> – such as email address, username, and password (or auth provider).</li>
+      <li><strong>Profile information</strong> – such as preferred styles, taste preferences, and saved settings.</li>
+      <li><strong>Beer activity</strong> – ratings, reviews, wishlists, favorites, history, and other beer interactions.</li>
+      <li><strong>Feedback &amp; support</strong> – messages you send us, bug reports, or survey responses.</li>
+      <li><strong>Optional media</strong> – photos of beers or labels you upload, if the app supports it.</li>
+    </ul>
+
+    <h4>(b) Information Collected Automatically</h4>
+    <ul>
+      <li><strong>App usage data</strong> – screens you visit, features you use, basic interaction analytics.</li>
+      <li><strong>Device &amp; technical data</strong> – device type, operating system, app version, anonymized identifiers.</li>
+      <li><strong>Log data</strong> – crash logs and performance metrics to help diagnose issues and improve stability.</li>
+      <li><strong>Approximate location (if enabled)</strong> – for region-based recommendations and brewery discovery.</li>
+    </ul>
+
+    <h4>(c) Data We Do Not Intentionally Collect</h4>
+    <ul>
+      <li>Government ID numbers (e.g., social insurance numbers, passports).</li>
+      <li>Precise GPS location unless you explicitly enable it in your device/app settings.</li>
+      <li>Payment card numbers (any in-app purchases would usually go through Apple/Google, not us directly).</li>
+      <li>Sensitive health, biometric, or medical records.</li>
+    </ul>
+
+    <h3>3.3 How We Use Your Data</h3>
+    <p>We use your data to:</p>
+    <ul>
+      <li>Provide and maintain the BeerMate app and its core features.</li>
+      <li>Personalize beer and brewery recommendations based on your activity and preferences.</li>
+      <li>Save your history, ratings, taste profile, and preferences.</li>
+      <li>Monitor app performance, fix bugs, and improve user experience.</li>
+      <li>Protect against misuse, fraud, or violations of our Terms.</li>
+      <li>Communicate with you about important changes, updates, or security notices.</li>
+    </ul>
+
+    <p class="highlight-box">
+      <strong>We do not sell your personal data.</strong> We may use aggregated or anonymized data
+      (which cannot reasonably be used to identify you) for analytics and product improvement.
+    </p>
+
+    <h3>3.4 Legal Bases (for users in the EU/UK & similar jurisdictions)</h3>
+    <p>
+      Where applicable, we rely on the following legal bases to process your data:
+    </p>
+    <ul>
+      <li><strong>Contract</strong> – to provide the BeerMate service you’ve requested.</li>
+      <li><strong>Legitimate interests</strong> – to maintain and improve the app, prevent abuse, and secure our systems.</li>
+      <li><strong>Consent</strong> – for optional features like marketing emails or certain analytics (where required).</li>
+      <li><strong>Legal obligation</strong> – where we must retain certain data under applicable law.</li>
+    </ul>
+
+    <h3>3.5 Sharing Your Data</h3>
+    <p>
+      We may share your data with:
+    </p>
+    <ul>
+      <li>
+        <strong>Service providers</strong> – such as hosting, database, analytics, logging, and error-tracking providers
+        that help us operate BeerMate. They are only allowed to process data on our behalf and under our instructions.
+      </li>
+      <li>
+        <strong>Legal authorities</strong> – if required by law, court order, or to protect our rights or the safety of users.
+      </li>
+      <li>
+        <strong>Business transfers</strong> – if we are involved in a merger, acquisition, or asset sale, your data may be
+        transferred as part of that transaction, subject to similar protections.
+      </li>
+    </ul>
+
+    <p>
+      We do <strong>not</strong> sell your personal information to third parties for their own marketing purposes.
+    </p>
+
+    <h3>3.6 Data Retention</h3>
+    <p>
+      We keep your personal data for as long as reasonably necessary to provide the app and for legitimate business
+      or legal reasons, such as:
+    </p>
+    <ul>
+      <li>Maintaining your account, history, and ratings.</li>
+      <li>Improving BeerMate and understanding usage patterns.</li>
+      <li>Complying with legal obligations or resolving disputes.</li>
+    </ul>
+    <p>
+      If you delete your account, we will remove or anonymize personal data where possible and where we are not
+      required by law to keep it longer.
+    </p>
+
+    <h3>3.7 Security</h3>
+    <p>
+      We use reasonable technical and organizational measures to protect your data against unauthorized access,
+      loss, or misuse. However, no system can be completely secure, and we cannot guarantee absolute security.
+    </p>
+
+    <h3>3.8 Your Rights &amp; Choices</h3>
+    <p>
+      Depending on where you live, you may have certain rights over your personal data, such as:
+    </p>
+    <ul>
+      <li>Accessing the personal data we hold about you.</li>
+      <li>Requesting correction of inaccurate or incomplete data.</li>
+      <li>Requesting deletion of your data (subject to legal or contractual limits).</li>
+      <li>Objecting to or restricting certain types of processing.</li>
+      <li>Exporting your data in a portable format, where technically feasible.</li>
+    </ul>
+    <p>
+      To exercise any of these rights, contact us at
+      <a href="mailto:you@example.com">you@example.com</a>. We may need to verify your identity before responding.
+    </p>
+
+    <h3>3.9 Children &amp; Underage Users</h3>
+    <p>
+      BeerMate is not intended for anyone under the legal drinking age in their region, and we do not knowingly
+      collect data from such individuals. If you believe someone under the legal drinking age has created an
+      account, please contact us so we can remove their access and data.
+    </p>
+
+    <h3>3.10 International Data Transfers</h3>
+    <p>
+      Your data may be processed in countries other than your own (for example, where our hosting or service providers
+      are located). We take steps to ensure that any such transfers comply with applicable data protection laws and
+      that your data remains appropriately protected.
+    </p>
+
+    <h3>3.11 Changes to This Privacy Policy</h3>
+    <p>
+      We may update this Privacy Policy to reflect changes in the app, legal requirements, or how we handle data.
+      We will update the “Last updated” date at the top of this page, and we may also notify you in the app
+      where appropriate.
+    </p>
+  </section>
+
+  <!-- Contact -->
+  <section class="card">
+    <h2>4. Contact Us</h2>
+    <p>
+      If you have any questions, concerns, or requests about these Terms or this Privacy Policy, you can contact us at:
+    </p>
+    <p>
+      <strong>Email:</strong> <a href="mailto:you@example.com">you@example.com</a><br />
+      <strong>Subject line suggestion:</strong> “BeerMate – Privacy / Terms question”
+    </p>
+    <p style="font-size:13px;">
+      Please include enough detail so we can understand and respond to your request efficiently
+      (but avoid sending sensitive information in plain email).
+    </p>
+  </section>
+</main>
+
+<footer>
+  &copy; <span id="year"></span> BeerMate – All rights reserved.
+</footer>
+
+<script>
+  // Set current year in footer
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>

@@ -16,12 +16,13 @@
       <header class="header">
         <div class="brand">
           <div class="brand-icon"></div>
-          <div>
+          <div class="brand-text-block">
             <div class="brand-title">BeerMate</div>
             <div class="brand-subtitle">Beer discovery &amp; tasting journal</div>
           </div>
         </div>
         <nav class="header-nav">
+          <a href="./index.html" class="active">Overview</a>
           <a href="./privacy.html">Privacy</a>
           <a href="./terms.html">Terms</a>
         </nav>
@@ -31,35 +32,76 @@
         <span>For App Store review &amp; test users</span>
       </div>
 
-      <h1>About BeerMate</h1>
-      <p>
-        BeerMate is a curated beer discovery companion for legal-age users. It helps you track what
-        you taste, rate beers with a tasting journal style UI, and explore breweries that match your preferences.
-        BeerMate does <strong>not</strong> sell alcohol or facilitate purchases.
-      </p>
+      <section class="hero">
+        <div class="hero-kicker">Product overview</div>
+        <h1 class="hero-title">About BeerMate</h1>
+        <p class="hero-lead">
+          BeerMate is a curated beer discovery companion for legal-age users. It helps you
+          track what you taste, rate beers with a tasting journal style UI, and explore
+          breweries that match your preferences. BeerMate does <strong>not</strong> sell
+          alcohol or facilitate purchases.
+        </p>
 
-      <p>
-        This site provides the official
-        <a href="./privacy.html">Privacy Policy</a> and
-        <a href="./terms.html">Terms of Use</a> for the BeerMate mobile application.
-      </p>
+        <div class="hero-grid">
+          <div class="hero-main">
+            <h2>What BeerMate does</h2>
+            <p>
+              BeerMate focuses on remembering what you liked, not selling anything. Users can:
+            </p>
+            <ul>
+              <li>Scan or search for beers and view community-style ratings;</li>
+              <li>Save beers to a tasting journal and add personal ratings;</li>
+              <li>Discover breweries and styles aligned with their preferences.</li>
+            </ul>
+            <p>
+              The app is designed for <strong>responsible, legal-age enjoyment</strong>.
+              We do not promote binge drinking, underage use, or any harmful behavior.
+            </p>
 
-      <h2>Support &amp; Data Requests</h2>
-      <p>
-        For questions about your data, to request deletion, or for general support, contact us at:
-      </p>
-      <p>
-        <strong>Email:</strong>
-        <a href="mailto:support@yourdomain.com">support@yourdomain.com</a><br />
-        <strong>App:</strong> BeerMate<br />
-        <strong>Purpose:</strong> Beer discovery, history, and taste preferences
-      </p>
+            <h3>Legal &amp; review resources</h3>
+            <p>
+              For App Store review and test users, the most relevant links are:
+            </p>
+            <ul>
+              <li><a href="./privacy.html">Privacy Policy</a> – data handling &amp; user rights</li>
+              <li><a href="./terms.html">Terms of Use</a> – acceptable use &amp; disclaimers</li>
+            </ul>
+            <p class="scroll-hint">
+              Reviewers can navigate directly to Privacy or Terms using the header links.
+            </p>
+          </div>
 
-      <p class="scroll-hint">
-        Tip: App Store reviewers can jump straight to
-        <a href="./privacy.html">Privacy</a> or
-        <a href="./terms.html">Terms</a>.
-      </p>
+          <aside class="hero-side">
+            <div class="info-card">
+              <div class="info-title">Implementation snapshot</div>
+              <div class="info-grid">
+                <div>
+                  <div class="info-label">Platform</div>
+                  <div class="info-value">iOS (TestFlight / App Store)</div>
+                </div>
+                <div>
+                  <div class="info-label">Audience</div>
+                  <div class="info-value">Legal drinking age only</div>
+                </div>
+                <div>
+                  <div class="info-label">Monetization</div>
+                  <div class="info-value">No in-app alcohol sales</div>
+                </div>
+                <div>
+                  <div class="info-label">Data focus</div>
+                  <div class="info-value">Accounts, ratings, preferences</div>
+                </div>
+              </div>
+              <p style="margin-top:10px;">
+                For any questions about data handling or user privacy, contact:
+                <br />
+                <strong>Email:</strong>
+                <a href="mailto:support@yourdomain.com">support@yourdomain.com</a>
+              </p>
+            </div>
+          </aside>
+        </div>
+      </section>
 
       <div class="footer">
         <span>© <span id="year"></span> BeerMate. All rights reserved.</span>

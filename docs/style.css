@@ -2,24 +2,49 @@
   --bg: #f8f6f2;
   --card: #ffffff;
   --accent: #c4b489;
+  --accent-soft: #e7dcc6;
+  --accent-deep: #8b7453;
   --ink: #222222;
   --muted: #6f6a62;
   --border: #e3ddd3;
-  --max-width: 740px;
+  --border-strong: #d1c6b3;
+  --max-width: 780px;
 }
 
+/* Global reset-ish */
 * {
   box-sizing: border-box;
 }
 
-body {
+html, body {
   margin: 0;
   padding: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: radial-gradient(circle at top, #f9f5ea 0, #f3f0ea 40%, #f0ece6 100%);
   color: var(--ink);
 }
 
+/* Background: subtle vignette + texture */
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top, #f9f5ea 0, #f3f0ea 40%, #f0ece6 100%);
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: -40%;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 20% 0%, rgba(240, 210, 160, 0.16) 0, transparent 55%),
+    radial-gradient(circle at 80% 100%, rgba(180, 160, 130, 0.16) 0, transparent 55%);
+  opacity: 0.9;
+  z-index: -1;
+}
+
+/* Layout shell */
 .page-shell {
   min-height: 100vh;
   display: flex;
@@ -27,17 +52,56 @@ body {
   justify-content: center;
 }
 
+/* Main card / glass panel */
 .content {
   width: 100%;
   max-width: var(--max-width);
   margin: 40px 16px 32px;
-  padding: 28px 22px 24px;
-  border-radius: 18px;
-  background: rgba(255,255,255,0.9);
-  border: 1px solid var(--border);
-  box-shadow: 0 18px 35px rgba(0,0,0,0.06);
+  padding: 26px 22px 22px;
+  border-radius: 20px;
+  background: linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.96),
+      rgba(252, 249, 243, 0.98)
+    );
+  border: 1px solid rgba(224, 215, 201, 0.95);
+  box-shadow:
+    0 22px 45px rgba(15, 12, 4, 0.12),
+    0 0 0 1px rgba(255, 255, 255, 0.9);
+  position: relative;
+  overflow: hidden;
 }
 
+/* Decorative inner highlight edge */
+.content::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(circle at 0 0, rgba(255, 255, 255, 0.7) 0, transparent 60%);
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+
+/* Tiny bottom light band */
+.content::after {
+  content: "";
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 10px;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(191, 173, 138, 0.45),
+    transparent
+  );
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+/* Header / brand strip */
 .header {
   display: flex;
   align-items: center;
@@ -53,48 +117,97 @@ body {
 }
 
 .brand-icon {
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
   border-radius: 999px;
-  background: radial-gradient(circle at 30% 10%, #ffe4aa 0, #c4b489 45%, #886b3d 100%);
-  border: 1px solid rgba(0,0,0,0.1);
+  background:
+    radial-gradient(circle at 30% 10%, #ffe7b5 0, #c4b489 42%, #8c6e41 100%);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  position: relative;
+  overflow: hidden;
+  box-shadow:
+    0 3px 8px rgba(0, 0, 0, 0.2),
+    0 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+/* subtle internal highlight */
+.brand-icon::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 0%, rgba(255, 255, 255, 0.52) 0, transparent 55%);
+  mix-blend-mode: screen;
+  opacity: 0.9;
 }
 
 .brand-title {
   font-weight: 700;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 13px;
 }
 
+.brand-subtitle {
+  font-size: 12px;
+  color: #8a847b;
+}
+
+/* header nav */
 .header-nav a {
   margin-left: 10px;
   font-size: 13px;
   text-decoration: none;
   color: var(--muted);
-  padding: 6px 10px;
+  padding: 6px 11px;
   border-radius: 999px;
   border: 1px solid transparent;
+  background: transparent;
+  transition:
+    background 0.18s ease,
+    border-color 0.18s ease,
+    color 0.18s ease,
+    transform 0.12s ease;
 }
 
 .header-nav a:hover {
   border-color: var(--border);
   background: #f8f4ec;
+  transform: translateY(-0.5px);
 }
 
+.header-nav a.active {
+  border-color: var(--border-strong);
+  background: linear-gradient(135deg, #f0e5d3, #f9f2e4);
+  color: var(--ink);
+}
+
+/* Typography base */
 h1 {
-  font-size: 22px;
+  font-size: 23px;
   margin: 10px 0 6px;
+  letter-spacing: 0.03em;
 }
 
 h2 {
   font-size: 18px;
   margin-top: 22px;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 16px;
+  margin-top: 18px;
+  margin-bottom: 6px;
+}
+
+h4 {
+  font-size: 14px;
+  margin-top: 14px;
+  margin-bottom: 4px;
 }
 
 p {
-  line-height: 1.55;
+  line-height: 1.6;
   color: var(--muted);
   font-size: 14px;
   margin: 6px 0 10px;
@@ -104,24 +217,170 @@ ul {
   padding-left: 18px;
   color: var(--muted);
   font-size: 14px;
+  margin: 6px 0 10px;
 }
 
+li {
+  margin: 2px 0 2px;
+}
+
+/* Badge / tag */
 .badge {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 6px 10px;
+  padding: 6px 11px;
   border-radius: 999px;
   border: 1px solid var(--border);
   font-size: 11px;
   color: var(--muted);
   background: #f8f4ec;
+  margin-bottom: 8px;
+}
+
+.badge::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 30% 10%, #ffeab6 0, #c69a41 92%);
+}
+
+/* Legal layout niceties */
+.content--legal {
+  padding-top: 24px;
+}
+
+/* Top of legal page: label + big title + meta line + pills */
+.legal-header {
+  margin-bottom: 18px;
+  position: relative;
+}
+
+.legal-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--muted);
+}
+
+.legal-eyebrow::before {
+  content: "";
+  width: 26px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--border-strong));
+}
+
+.legal-title {
+  margin: 8px 0 4px;
+  font-size: 24px;
+  letter-spacing: 0.04em;
+}
+
+.legal-meta {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* Chip row under header */
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.chip {
+  padding: 4px 9px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  font-size: 11px;
+  color: var(--muted);
+  background: #fbf8f2;
+}
+
+/* Legal sections */
+.legal-section {
+  padding-top: 14px;
+  padding-bottom: 12px;
+  border-top: 1px solid rgba(225, 217, 204, 0.85);
+}
+
+.legal-section:first-of-type {
+  border-top: none;
+  padding-top: 4px;
+}
+
+.section-heading-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
   margin-bottom: 4px;
 }
 
+.section-index {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Soft callouts & highlight boxes */
+.callout {
+  border-radius: 12px;
+  border: 1px dashed var(--border);
+  background: #fbf8f2;
+  padding: 10px 12px;
+  font-size: 13px;
+  color: var(--muted);
+  margin: 8px 0 10px;
+}
+
+.callout strong {
+  color: var(--ink);
+}
+
+.callout--accent {
+  border-style: solid;
+  border-color: var(--accent-soft);
+}
+
+/* Inline tags */
+.inline-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 7px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  background: #fcf9f3;
+}
+
+/* Links */
+a {
+  color: var(--accent-deep);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
 .footer {
-  margin-top: 20px;
-  padding-top: 10px;
+  margin-top: 22px;
+  padding-top: 12px;
   border-top: 1px dashed var(--border);
   font-size: 11px;
   color: var(--muted);
@@ -138,4 +397,33 @@ ul {
 
 .footer a:hover {
   text-decoration: underline;
+}
+
+/* Tiny scroll hint if needed */
+.scroll-hint {
+  font-size: 11px;
+  color: var(--muted);
+  opacity: 0.7;
+  margin-top: 4px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 640px) {
+  .content {
+    margin: 24px 12px 24px;
+    padding: 22px 16px 18px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-nav {
+    align-self: flex-end;
+  }
+
+  .legal-title {
+    font-size: 21px;
+  }
 }

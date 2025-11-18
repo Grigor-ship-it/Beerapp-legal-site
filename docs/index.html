@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Beermate – App Information</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <main class="content">
+      <header class="header">
+        <div class="brand">
+          <div class="brand-icon"></div>
+          <div>
+            <div class="brand-title">Beermate</div>
+            <div style="font-size:12px; color:#8a847b;">Beer discovery & tasting journal</div>
+          </div>
+        </div>
+        <nav class="header-nav">
+          <a href="./privacy.html">Privacy</a>
+          <a href="./terms.html">Terms</a>
+        </nav>
+      </header>
+
+      <div class="badge">
+        <span>For App Store review & test users</span>
+      </div>
+
+      <h1>About Beermate</h1>
+      <p>
+        Beermate is a beer discovery companion that helps legal-age users keep track of what they taste,
+        rate beers, and explore breweries. The app does not sell alcohol or facilitate purchases.
+      </p>
+
+      <p>
+        This site provides the official <a href="./privacy.html">Privacy Policy</a>
+        and <a href="./terms.html">Terms of Use</a> for the Beermate mobile application.
+      </p>
+
+      <h2>Support</h2>
+      <p>
+        For questions about your data or to request deletion, contact us at
+        <a href="mailto:support@yourdomain.com">support@yourdomain.com</a>.
+      </p>
+
+      <div class="footer">
+        <span>© <span id="year"></span> Beermate. All rights reserved.</span>
+        <span>
+          <a href="./privacy.html">Privacy</a> ·
+          <a href="./terms.html">Terms</a>
+        </span>
+      </div>
+    </main>
+  </div>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

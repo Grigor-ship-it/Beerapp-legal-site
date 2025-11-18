@@ -1,0 +1,141 @@
+:root {
+  --bg: #f8f6f2;
+  --card: #ffffff;
+  --accent: #c4b489;
+  --ink: #222222;
+  --muted: #6f6a62;
+  --border: #e3ddd3;
+  --max-width: 740px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, #f9f5ea 0, #f3f0ea 40%, #f0ece6 100%);
+  color: var(--ink);
+}
+
+.page-shell {
+  min-height: 100vh;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.content {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 40px 16px 32px;
+  padding: 28px 22px 24px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.9);
+  border: 1px solid var(--border);
+  box-shadow: 0 18px 35px rgba(0,0,0,0.06);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 30% 10%, #ffe4aa 0, #c4b489 45%, #886b3d 100%);
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+.brand-title {
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.header-nav a {
+  margin-left: 10px;
+  font-size: 13px;
+  text-decoration: none;
+  color: var(--muted);
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+}
+
+.header-nav a:hover {
+  border-color: var(--border);
+  background: #f8f4ec;
+}
+
+h1 {
+  font-size: 22px;
+  margin: 10px 0 6px;
+}
+
+h2 {
+  font-size: 18px;
+  margin-top: 22px;
+  margin-bottom: 8px;
+}
+
+p {
+  line-height: 1.55;
+  color: var(--muted);
+  font-size: 14px;
+  margin: 6px 0 10px;
+}
+
+ul {
+  padding-left: 18px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  font-size: 11px;
+  color: var(--muted);
+  background: #f8f4ec;
+  margin-bottom: 4px;
+}
+
+.footer {
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--border);
+  font-size: 11px;
+  color: var(--muted);
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.footer a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
